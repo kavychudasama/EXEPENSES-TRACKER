@@ -301,4 +301,10 @@ def three_weeks():
 
     except Exception as error:
         print(error)
-        return jsonify({"error": "Could not load weekly data."}), 500
+        return jsonify({"error": "Could not load weekly data."}), 500  
+        @app.route("/")
+def api_home():
+    return jsonify({
+        "status": "ok",
+        "message": "Expense Flow API is running"
+    })
